@@ -4,7 +4,5 @@
 const Bundler = require('../bundler')
 const Server = require('../server')
 
-new Bundler()
-  .then(() => {
-    new Server().start()
-  })
+Bundler.compile()
+  .then(() => Server.start())

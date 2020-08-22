@@ -9,13 +9,12 @@
 
 const webpack = require('webpack')
 
-module.exports = class Bundler {
+class Bundler {
   constructor ({
     isDev
   } = {}) {
     const webpackConfig = require(`./webpack.${isDev ? 'dev' : 'prod'}`)
     this.compiler = webpack(webpackConfig)
-    return isDev ? this.watch() : this.compile()
   }
 
   // Compile code once
@@ -56,3 +55,5 @@ module.exports = class Bundler {
     })
   }
 }
+
+module.exports = new Bundler()

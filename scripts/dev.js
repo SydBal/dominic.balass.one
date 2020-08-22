@@ -9,7 +9,5 @@ const settings = {
   isDev: true
 }
 
-new Bundler(settings)
-  .then(() => {
-    new Server().start()
-  })
+Bundler.compile(settings)
+  .then(() => Server.start())

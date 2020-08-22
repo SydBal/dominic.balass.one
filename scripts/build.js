@@ -3,4 +3,4 @@
  */
 const Bundler = require('../bundler')
 
-;(() => new Bundler())()
+Bundler.compile()

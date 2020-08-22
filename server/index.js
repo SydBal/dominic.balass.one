@@ -1,7 +1,7 @@
 const path = require('path')
 const express = require('express')
 
-module.exports = class Server {
+class Server {
   constructor ({
     port
   } = {}) {
@@ -45,3 +45,5 @@ module.exports = class Server {
     return this.listen()
   }
 }
+
+module.exports = new Server()
