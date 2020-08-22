@@ -4,7 +4,7 @@ import { render } from 'react-dom'
 
 const app =
   <>
-    Hi world!!
+    Hi world!!!!!
   </>
 
-render(app, document.getElementById('app'))
+render(app, document.getElementById('spa-entry'))

@@ -4,5 +4,5 @@ package-lock.json
 .idea
 .vscode
 
-frontend/public/app.js*
-frontend/public/styles.css*
+public/app.js*
+public/styles.css*

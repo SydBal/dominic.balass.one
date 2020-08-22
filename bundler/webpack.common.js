@@ -2,15 +2,12 @@
 const path = require('path')
 
 module.exports = {
-  context: path.resolve(__dirname, '../../'),
+  context: path.resolve(__dirname, '../'),
   resolve: {
-    alias: {
-      Backend: path.resolve(__dirname, './backend'),
-      Frontend: path.resolve(__dirname, './frontend')
-    }
+    alias: { }
   },
   entry: {
-    app: './frontend/app/components/index.js'
+    app: './spa/index.js'
   },
   module: {
     rules: [
@@ -52,7 +49,7 @@ module.exports = {
   },
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, '../../frontend/public'),
+    path: path.resolve(__dirname, '../public'),
     publicPath: '/'
   }
 }

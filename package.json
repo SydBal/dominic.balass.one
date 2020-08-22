@@ -14,13 +14,12 @@
       "email": "dominic.balassone@gmail.com"
     }
   ],
-  "main": "backend/server.js",
+  "main": "server/index.js",
   "dependencies": {
     "@babel/core": "^7.7.2",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
     "babel-loader": "^8.0.6",
-    "cross-env": "^6.0.3",
     "css-loader": "^3.2.0",
     "express": "^4.17.1",
     "node-sass": "^4.13.0",
@@ -35,10 +34,9 @@
     "webpack-merge": "^4.2.2"
   },
   "scripts": {
-    "test": "standard",
-    "start": "cross-env NODE_ENV=production node ./backend/server.js",
-    "dev": "cross-env NODE_ENV=development node ./backend/server.js",
-    "build": "cross-env webpack --config ./backend/bundler/webpack.prod.js"
+    "start": "node scripts/start",
+    "dev": "node scripts/dev",
+    "build": "node scripts/build"
   },
   "bugs": {
     "url": "https://github.com/SydBal/dominic.balass.one/issues"
