@@ -10,11 +10,15 @@
 const webpack = require('webpack')
 
 class Bundler {
-  constructor ({
-    isDev
-  } = {}) {
-    const webpackConfig = require(`./webpack.${isDev ? 'dev' : 'prod'}`)
+  constructor (config) {
+    // Defaulting to the production config
+    const webpackConfig = require('./webpack.prod')
     this.compiler = webpack(webpackConfig)
+  }
+
+  set isDev (bool) {
+    if (typeof bool !== 'boolean') throw new Error('isDev must be set to boolean value, got ' + typeof bool)
+    this.compiler = webpack(require(`./webpack.${bool ? 'dev' : 'prod'}`))
   }
 
   // Compile code once

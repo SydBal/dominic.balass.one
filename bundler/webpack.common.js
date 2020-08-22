@@ -5,7 +5,7 @@ module.exports = {
   context: path.resolve(__dirname, '../'),
   resolve: {
     alias: {
-      Components: path.resolve(__dirname, '../spa/components')
+      SPA: path.resolve(__dirname, '../spa')
     }
   },
   entry: {

@@ -1,5 +1,12 @@
 import React from 'react'
 import { render } from 'react-dom'
-import App from 'Components'
+import Routes from './Routes'
 
-render(<App />, document.getElementById('spa-entry'))
+import './scss/index.scss'
+
+const Root = () =>
+  <>
+    <Routes />
+  </>
+
+render(<Root />, document.getElementById('spa-entry'))

@@ -5,9 +5,7 @@
 const Bundler = require('../bundler')
 const Server = require('../server')
 
-const settings = {
-  isDev: true
-}
+Bundler.isDev = true
 
-Bundler.compile(settings)
+Bundler.watch()
   .then(() => Server.start())
