@@ -12,13 +12,14 @@ const webpack = require('webpack')
 class Bundler {
   constructor (config) {
     // Defaulting to the production config
-    const webpackConfig = require('./webpack.prod')
-    this.compiler = webpack(webpackConfig)
+    this.webpackConfig = require('./webpack.prod')
+    this.compiler = webpack(this.webpackConfig)
   }
 
   set isDev (bool) {
     if (typeof bool !== 'boolean') throw new Error('isDev must be set to boolean value, got ' + typeof bool)
-    this.compiler = webpack(require(`./webpack.${bool ? 'dev' : 'prod'}`))
+    this.webpackConfig = require(`./webpack.${bool ? 'dev' : 'prod'}`)
+    this.compiler = webpack(this.webpackConfig)
   }
 
   // Compile code once
