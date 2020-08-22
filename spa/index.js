@@ -1,10 +1,5 @@
-// Rreact App Setup
 import React from 'react'
 import { render } from 'react-dom'
+import App from 'Components'
 
-const app =
-  <>
-    Hi world!!!!!
-  </>
-
-render(app, document.getElementById('spa-entry'))
+render(<App />, document.getElementById('spa-entry'))

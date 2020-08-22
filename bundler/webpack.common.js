@@ -4,7 +4,9 @@ const path = require('path')
 module.exports = {
   context: path.resolve(__dirname, '../'),
   resolve: {
-    alias: { }
+    alias: {
+      Components: path.resolve(__dirname, '../spa/components')
+    }
   },
   entry: {
     app: './spa/index.js'
