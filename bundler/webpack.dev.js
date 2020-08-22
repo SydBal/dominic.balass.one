@@ -12,8 +12,6 @@ module.exports = merge(common, {
     app: ['./spa/index.js', hotMiddlewareScript]
   },
   plugins: [
-    new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin()
+    new webpack.HotModuleReplacementPlugin()
   ]
 })
